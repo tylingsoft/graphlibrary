@@ -1,3 +1,4 @@
+/* eslint-env mocha */
 /* global define */
 
 define(function (require) {

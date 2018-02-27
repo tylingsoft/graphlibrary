@@ -1,3 +1,4 @@
+/* eslint-env mocha */
 var expect = require('../chai').expect,
   _ = require('lodash'),
   Graph = require('../..').Graph,
