@@ -1,16 +1,14 @@
-# Graphlib
+# Graphlibrary
 
-Graphlib is a JavaScript library that provides data structures for undirected
-and directed multi-graphs along with algorithms that can be used with them.
+[![Build Status](https://secure.travis-ci.org/tylingsoft/graphlibrary.svg)](http://travis-ci.org/tylingsoft/graphlibrary)
 
-[![Build Status](https://secure.travis-ci.org/dagrejs/graphlib.svg)](http://travis-ci.org/dagrejs/graphlib)
+Graphlibrary is a JavaScript library that provides data structures for undirected and directed multi-graphs along with algorithms that can be used with them.
 
-To learn more [see our Wiki](https://github.com/cpettitt/graphlib/wiki).
+Graphlibrary is not built from scratch, it's based on [dagrejs/graphlib](https://github.com/dagrejs/graphlib). And it is designed as an out-of-box replacement of dagrejs/graphlib.
+
+To learn more [see our Wiki](https://github.com/dagrejs/graphlib/wiki).
+
 
 # License
 
-Graphlib is licensed under the terms of the MIT License. See the
-[LICENSE](LICENSE) file
-for details.
-
-[npm package manager]: http://npmjs.org/
+Graphlibrary is licensed under the terms of the MIT License. See the [LICENSE](LICENSE) file for details.
