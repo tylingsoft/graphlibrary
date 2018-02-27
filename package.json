@@ -1,6 +1,6 @@
 {
   "name": "graphlib",
-  "version": "2.1.6-pre",
+  "version": "2.1.6",
   "description": "A directed and undirected multi-graph library",
   "author": "Chris Pettitt <cpettitt@gmail.com>",
   "main": "index.js",
@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "upgrade": "yarn-upgrade-all",
-    "test": "make test"
+    "test": "make test && make bench"
   },
   "dependencies": {
     "lodash": "^4.17.5"
