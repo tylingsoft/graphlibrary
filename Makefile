@@ -52,9 +52,6 @@ browser-test: $(BUILD_DIR)/$(MOD).js $(BUILD_DIR)/$(MOD).core.js
 browser-test-amd: $(BUILD_DIR)/$(MOD).js $(BUILD_DIR)/$(MOD).core.js
 	$(KARMA) start karma.amd.conf.js --single-run $(KARMA_OPTS)
 
-bower.json: package.json src/release/make-bower.json.js
-	@src/release/make-bower.json.js > $@
-
 $(BUILD_DIR)/$(MOD).js: index.js $(SRC_FILES) | unit-test
 	@$(BROWSERIFY) $< > $@ -s graphlib
 
@@ -67,7 +64,7 @@ $(BUILD_DIR)/$(MOD).core.js: index.js $(SRC_FILES) | unit-test
 $(BUILD_DIR)/$(MOD).core.min.js: $(BUILD_DIR)/$(MOD).core.js
 	@$(UGLIFY) $< --comments '@license' > $@
 
-dist: $(BUILD_FILES) | bower.json test
+dist: $(BUILD_FILES) | test
 	@rm -rf $@
 	@mkdir -p $@
 	@cp $^ dist
