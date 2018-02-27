@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "upgrade": "yarn-upgrade-all",
-    "test": "make test && make bench"
+    "lint": "standard",
+    "test": "yarn lint && make test && make bench"
   },
   "dependencies": {
     "lodash": "^4.17.5"
@@ -20,9 +21,6 @@
     "browserify": "^16.1.0",
     "chai": "^4.1.2",
     "istanbul": "^0.4.5",
-    "jscs": "^3.0.7",
-    "jshint": "^2.9.5",
-    "jshint-stylish": "^2.2.1",
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-firefox-launcher": "^1.1.0",
@@ -36,6 +34,7 @@
     "seedrandom": "^2.4.3",
     "semver": "^5.5.0",
     "sprintf": "^0.1.5",
+    "standard": "^11.0.0",
     "uglify-js": "^3.3.12",
     "yarn-upgrade-all": "^0.3.0"
   },
@@ -43,5 +42,10 @@
     "type": "git",
     "url": "https://github.com/tylingsoft/graphlibrary.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "standard": {
+    "ignore": [
+      "dist/**/*.js"
+    ]
+  }
 }

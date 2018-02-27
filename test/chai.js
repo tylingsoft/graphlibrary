@@ -1,5 +1,5 @@
-var chai = require("chai");
+var chai = require('chai')
 
-module.exports = chai;
+module.exports = chai
 
-chai.config.includeStack = true;
+chai.config.includeStack = true
