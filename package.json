@@ -8,12 +8,16 @@
     "graph",
     "algorithms"
   ],
+  "scripts": {
+    "upgrade": "yarn-upgrade-all",
+    "test": "make test"
+  },
   "dependencies": {
     "lodash": "^4.17.5"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
-    "browserify": "^16.0.0",
+    "browserify": "^16.1.0",
     "chai": "^4.1.2",
     "istanbul": "^0.4.5",
     "jscs": "^3.0.7",
@@ -26,13 +30,14 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-requirejs": "^1.1.0",
     "karma-safari-launcher": "^1.0.0",
-    "mocha": "^5.0.0",
+    "mocha": "^5.0.1",
     "phantomjs-prebuilt": "^2.1.16",
     "requirejs": "^2.3.5",
     "seedrandom": "^2.4.3",
     "semver": "^5.5.0",
     "sprintf": "^0.1.5",
-    "uglify-js": "^3.3.10"
+    "uglify-js": "^3.3.12",
+    "yarn-upgrade-all": "^0.3.0"
   },
   "repository": {
     "type": "git",
