@@ -1,9 +1,9 @@
 /* eslint-env mocha */
-var expect = require('../chai').expect,
-  _ = require('lodash')
+const expect = require('../chai').expect
+const _ = require('lodash')
 
-var Graph = require('../..').Graph,
-  topsort = require('../..').alg.topsort
+const Graph = require('../..').Graph
+const topsort = require('../..').alg.topsort
 
 describe('alg.topsort', function () {
   it('returns an empty array for an empty graph', function () {

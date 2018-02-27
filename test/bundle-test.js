@@ -20,9 +20,9 @@ describe('bundle', function () {
     g.setNode('a')
     g.setNode('b')
     g.setEdge('a', 'b')
-    expect(g.hasNode('a')).to.be.true
-    expect(g.hasNode('b')).to.be.true
-    expect(g.hasEdge('a', 'b')).to.be.true
+    expect(g.hasNode('a')).to.equal(true)
+    expect(g.hasNode('b')).to.equal(true)
+    expect(g.hasEdge('a', 'b')).to.equal(true)
   })
 
   it('can serialize to json and back', function () {
@@ -33,8 +33,8 @@ describe('bundle', function () {
 
     var json = graphlib.json.write(g)
     var g2 = graphlib.json.read(json)
-    expect(g2.hasNode('a')).to.be.true
-    expect(g2.hasNode('b')).to.be.true
-    expect(g2.hasEdge('a', 'b')).to.be.true
+    expect(g2.hasNode('a')).to.equal(true)
+    expect(g2.hasNode('b')).to.equal(true)
+    expect(g2.hasEdge('a', 'b')).to.equal(true)
   })
 })
