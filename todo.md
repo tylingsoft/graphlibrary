@@ -1,0 +1,1 @@
+- build before publish
