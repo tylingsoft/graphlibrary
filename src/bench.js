@@ -20,16 +20,16 @@ const KEY_SIZE = 10
 function runBenchmark (name, fn) {
   var options = {}
   options.onComplete = function (bench) {
-    var target = bench.target,
-      hz = target.hz,
-      stats = target.stats,
-      rme = stats.rme,
-      samples = stats.sample.length,
-      msg = sprintf('    %25s: %13s ops/sec \xb1 %s%% (%3d run(s) sampled)',
-        target.name,
-        Benchmark.formatNumber(hz.toFixed(2)),
-        rme.toFixed(2),
-        samples)
+    const target = bench.target
+    const hz = target.hz
+    const stats = target.stats
+    const rme = stats.rme
+    const samples = stats.sample.length
+    const msg = sprintf('    %25s: %13s ops/sec \xb1 %s%% (%3d run(s) sampled)',
+      target.name,
+      Benchmark.formatNumber(hz.toFixed(2)),
+      rme.toFixed(2),
+      samples)
     console.log(msg)
   }
   options.onError = function (bench) {
@@ -45,8 +45,8 @@ function runBenchmark (name, fn) {
 }
 
 function keys (count) {
-  var ks = [],
-    k
+  const ks = []
+  let k
   for (var i = 0; i < count; ++i) {
     k = ''
     for (var j = 0; j < KEY_SIZE; ++j) {
@@ -58,9 +58,9 @@ function keys (count) {
 }
 
 function buildGraph (numNodes, edgeDensity) {
-  var g = new Graph(),
-    numEdges = numNodes * numNodes * edgeDensity,
-    ks = keys(numNodes)
+  const g = new Graph()
+  const numEdges = numNodes * numNodes * edgeDensity
+  const ks = keys(numNodes)
 
   ks.forEach(function (k) { g.setNode(k) })
 
@@ -76,10 +76,10 @@ function buildGraph (numNodes, edgeDensity) {
 }
 
 NODE_SIZES.forEach(function (size) {
-  var g = buildGraph(size, EDGE_DENSITY),
-    nodes = g.nodes(),
-    edges = g.edges(),
-    nameSuffix = '(' + size + ',' + EDGE_DENSITY + ')'
+  const g = buildGraph(size, EDGE_DENSITY)
+  const nodes = g.nodes()
+  const edges = g.edges()
+  const nameSuffix = '(' + size + ',' + EDGE_DENSITY + ')'
 
   runBenchmark('nodes' + nameSuffix, function () {
     g.nodes()

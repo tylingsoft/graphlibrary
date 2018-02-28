@@ -10,9 +10,8 @@
   ],
   "scripts": {
     "upgrade": "yarn-upgrade-all",
-    "lint": "standard",
-    "test": "yarn lint && make test && make bench",
-    "prepush": "make test"
+    "test": "standard && make test && make bench",
+    "prepush": "yarn test"
   },
   "dependencies": {
     "lodash": "^4.17.5"
