@@ -14,7 +14,7 @@ BUILD_DIR = build
 COVERAGE_DIR = $(BUILD_DIR)/cov
 DIST_DIR = dist
 
-SRC_FILES = index.js lib/version.js $(shell find lib -type f -name '*.js')
+SRC_FILES = index.js $(shell find lib -type f -name '*.js')
 TEST_FILES = $(shell find test -type f -name '*.js' | grep -v 'bundle-test.js' | grep -v 'bundle.amd-test.js' | grep -v 'test-main.js')
 BUILD_FILES = $(addprefix $(BUILD_DIR)/, \
 						$(MOD).js $(MOD).min.js \
@@ -28,9 +28,6 @@ all: unit-test
 
 bench: test
 	@src/bench.js
-
-lib/version.js: package.json
-	@src/release/make-version.js > $@
 
 $(DIRS):
 	@mkdir -p $@
