@@ -1,6 +1,6 @@
 /* eslint-env mocha */
-var expect = require('../chai').expect,
-  Graph = require('../..').Graph
+const expect = require('../chai').expect
+const Graph = require('../..').Graph
 
 exports.tests = tests
 
@@ -9,7 +9,7 @@ function tests (sp) {
     it('returns 0 for the node itself', function () {
       var g = new Graph()
       g.setNode('a')
-      expect(sp(g)).to.eql({ a: { a: { distance: 0 } }})
+      expect(sp(g)).to.eql({ a: { a: { distance: 0 } } })
     })
 
     it('returns the distance and path from all nodes to other nodes', function () {

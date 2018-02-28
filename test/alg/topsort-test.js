@@ -7,7 +7,7 @@ const topsort = require('../..').alg.topsort
 
 describe('alg.topsort', function () {
   it('returns an empty array for an empty graph', function () {
-    expect(topsort(new Graph())).to.be.empty
+    expect(topsort(new Graph()).length).to.equal(0)
   })
 
   it('sorts nodes such that earlier nodes have directed edges to later nodes', function () {

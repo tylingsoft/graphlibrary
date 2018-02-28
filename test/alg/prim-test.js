@@ -1,8 +1,8 @@
 /* eslint-env mocha */
-var _ = require('lodash'),
-  expect = require('../chai').expect,
-  Graph = require('../..').Graph,
-  prim = require('../..').alg.prim
+const _ = require('lodash')
+const expect = require('../chai').expect
+const Graph = require('../..').Graph
+const prim = require('../..').alg.prim
 
 describe('alg.prim', function () {
   it('returns an empty graph for an empty input', function () {

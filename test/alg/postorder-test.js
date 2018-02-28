@@ -1,8 +1,8 @@
 /* eslint-env mocha */
-var _ = require('lodash'),
-  expect = require('../chai').expect,
-  Graph = require('../..').Graph,
-  postorder = require('../..').alg.postorder
+const _ = require('lodash')
+const expect = require('../chai').expect
+const Graph = require('../..').Graph
+const postorder = require('../..').alg.postorder
 
 describe('alg.postorder', function () {
   it('returns the root for a singleton graph', function () {

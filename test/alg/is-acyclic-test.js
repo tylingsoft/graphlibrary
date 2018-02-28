@@ -1,7 +1,7 @@
 /* eslint-env mocha */
-var expect = require('../chai').expect,
-  Graph = require('../..').Graph,
-  isAcyclic = require('../..').alg.isAcyclic
+const expect = require('../chai').expect
+const Graph = require('../..').Graph
+const isAcyclic = require('../..').alg.isAcyclic
 
 describe('alg.isAcyclic', function () {
   it('returns true if the graph has no cycles', function () {

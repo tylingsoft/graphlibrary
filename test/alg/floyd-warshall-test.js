@@ -1,8 +1,8 @@
 /* eslint-env mocha */
-var expect = require('../chai').expect,
-  Graph = require('../..').Graph,
-  floydWarshall = require('../..').alg.floydWarshall,
-  allShortestPathsTest = require('./all-shortest-paths-test')
+const expect = require('../chai').expect
+const Graph = require('../..').Graph
+const floydWarshall = require('../..').alg.floydWarshall
+const allShortestPathsTest = require('./all-shortest-paths-test')
 
 describe('alg.floydWarshall', function () {
   allShortestPathsTest.tests(floydWarshall)

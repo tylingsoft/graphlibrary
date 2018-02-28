@@ -1,8 +1,8 @@
 /* eslint-env mocha */
-var expect = require('../chai').expect
+const expect = require('../chai').expect
 
-var Graph = require('../..').Graph,
-  dijkstra = require('../..').alg.dijkstra
+const Graph = require('../..').Graph
+const dijkstra = require('../..').alg.dijkstra
 
 describe('alg.dijkstra', function () {
   it('assigns distance 0 for the source node', function () {

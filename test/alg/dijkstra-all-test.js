@@ -1,8 +1,8 @@
 /* eslint-env mocha */
-var expect = require('../chai').expect,
-  Graph = require('../..').Graph,
-  dijkstraAll = require('../..').alg.dijkstraAll,
-  allShortestPathsTest = require('./all-shortest-paths-test')
+const expect = require('../chai').expect
+const Graph = require('../..').Graph
+const dijkstraAll = require('../..').alg.dijkstraAll
+const allShortestPathsTest = require('./all-shortest-paths-test')
 
 describe('alg.dijkstraAll', function () {
   allShortestPathsTest.tests(dijkstraAll)

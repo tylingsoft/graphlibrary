@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-var Benchmark = require('benchmark'),
-  seedrandom = require('seedrandom'),
-  sprintf = require('sprintf').sprintf
+const Benchmark = require('benchmark')
+const seedrandom = require('seedrandom')
+const sprintf = require('sprintf').sprintf
 
 var seed = process.env.SEED
 seedrandom(seed, { global: true })
@@ -10,12 +10,12 @@ if (seed) {
   console.log('SEED: %s (%d)', seed, Math.random())
 }
 
-var Graph = require('..').Graph,
-  alg = require('..').alg
+const Graph = require('..').Graph
+const alg = require('..').alg
 
-var NODE_SIZES = [100],
-  EDGE_DENSITY = 0.2,
-  KEY_SIZE = 10
+const NODE_SIZES = [100]
+const EDGE_DENSITY = 0.2
+const KEY_SIZE = 10
 
 function runBenchmark (name, fn) {
   var options = {}

@@ -1,8 +1,8 @@
 /* eslint-env mocha */
-var _ = require('lodash'),
-  expect = require('../chai').expect,
-  Graph = require('../..').Graph,
-  tarjan = require('../..').alg.tarjan
+const _ = require('lodash')
+const expect = require('../chai').expect
+const Graph = require('../..').Graph
+const tarjan = require('../..').alg.tarjan
 
 describe('alg.tarjan', function () {
   it('returns an empty array for an empty graph', function () {

@@ -1,8 +1,8 @@
 /* eslint-env mocha */
-var _ = require('lodash'),
-  expect = require('../chai').expect,
-  Graph = require('../..').Graph,
-  preorder = require('../..').alg.preorder
+const _ = require('lodash')
+const expect = require('../chai').expect
+const Graph = require('../..').Graph
+const preorder = require('../..').alg.preorder
 
 describe('alg.preorder', function () {
   it('returns the root for a singleton graph', function () {
