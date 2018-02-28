@@ -48,13 +48,13 @@ $(BUILD_DIR)/$(MOD).js: index.js $(SRC_FILES) | unit-test
 	@$(BROWSERIFY) $< > $@ -s graphlib
 
 $(BUILD_DIR)/$(MOD).min.js: $(BUILD_DIR)/$(MOD).js
-	@$(UGLIFY) $< --comments '@license' > $@
+	@$(UGLIFY) --ecma=6 $< --comments '@license' > $@
 
 $(BUILD_DIR)/$(MOD).core.js: index.js $(SRC_FILES) | unit-test
 	@$(BROWSERIFY) $< > $@ --no-bundle-external -s graphlib
 
 $(BUILD_DIR)/$(MOD).core.min.js: $(BUILD_DIR)/$(MOD).core.js
-	@$(UGLIFY) $< --comments '@license' > $@
+	@$(UGLIFY) --ecma=6 $< --comments '@license' > $@
 
 dist: $(BUILD_FILES) | test
 	@rm -rf $@

@@ -1,1 +1,1 @@
-- build before publish
+- Setup Travis CI
