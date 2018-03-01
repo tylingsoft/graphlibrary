@@ -5,7 +5,7 @@ BROWSERIFY = ./node_modules/browserify/bin/cmd.js
 ISTANBUL = ./node_modules/istanbul/lib/cli.js
 KARMA = ./node_modules/karma/bin/karma
 MOCHA = ./node_modules/mocha/bin/_mocha
-UGLIFY = ./node_modules/uglify-js/bin/uglifyjs
+UGLIFY = ./node_modules/uglify-es/bin/uglifyjs
 
 ISTANBUL_OPTS = --dir $(COVERAGE_DIR) --report html
 MOCHA_OPTS = -R dot
