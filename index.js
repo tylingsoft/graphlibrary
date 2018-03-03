@@ -1,8 +1,5 @@
-var lib = require('./lib')
-
 module.exports = {
-  Graph: lib.Graph,
+  Graph: require('./lib/graph'),
   json: require('./lib/json'),
-  alg: require('./lib/alg'),
-  version: lib.version
+  alg: require('./lib/alg')
 }

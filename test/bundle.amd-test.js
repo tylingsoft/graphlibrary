@@ -16,7 +16,6 @@ define(function (require) {
       expect(graphlibCore.Graph).to.be.a('function')
       expect(graphlibCore.json).to.be.a('object')
       expect(graphlibCore.alg).to.be.a('object')
-      expect(graphlibCore.version).to.be.a('string')
     })
 
     it('can do simple graph operations', function () {
@@ -49,7 +48,6 @@ define(function (require) {
       expect(graphlib.Graph).to.be.a('function')
       expect(graphlib.json).to.be.a('object')
       expect(graphlib.alg).to.be.a('object')
-      expect(graphlib.version).to.be.a('string')
     })
 
     it('can do simple graph operations', function () {

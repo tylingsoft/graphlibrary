@@ -1,6 +1,6 @@
 {
   "name": "graphlibrary",
-  "version": "2.1.8",
+  "version": "2.2.0",
   "description": "A directed and undirected multi-graph library",
   "author": "Tyler Long <tyler4long@gmail.com>",
   "main": "index.js",

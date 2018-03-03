@@ -12,7 +12,6 @@ describe('bundle', function () {
     expect(graphlib.Graph).to.be.a('function')
     expect(graphlib.json).to.be.a('object')
     expect(graphlib.alg).to.be.a('object')
-    expect(graphlib.version).to.be.a('string')
   })
 
   it('can do simple graph operations', function () {
